@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/add_client.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+      
+    <title>Email</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+        
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    <div class="heading"><h1>Custom Mail</h1></div>
+    <form method="POST" class='form'>
+      {% csrf_token %} 
+      <p class='field '>
+      
+        <h3>Dear [username] / M/S [CompanyName] , 
+        </h3>
+      </p> 
+      
+      <p class='field'>
+        <label class='label' for='about'>Body of Email:</label>
+        <textarea class='textarea' cols='50' id='email' name='email' rows='10'></textarea>
+      </p>
+      
+      <p class='field '>
+      <h3> We request you to check the deadline of [TaxName] <br>
+        Please pay the dues on or before the date of deadline : [Date of Due]
+        <br> Yours sincerely,
+        <br> [CA Name] </h3>
+      </p>
+
+      <p class='field '>
+      </p>
+      <p class='field required half'>
+        <input class='button' type='submit' value='Update'>
+      </p>
+
+     </form>
+    
+   </div>
+  </body>
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+         </div>
+     
+      <div class="clear"></div>
+    </div>
+  </footer>
+ </html>

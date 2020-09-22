@@ -1,0 +1,220 @@
+body {
+  background-color: #fff;
+  color: #777;
+  font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+p {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #57e3ff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+
+header {
+  height: 120px;
+  background-color: black;
+}
+.logo {
+  width: 40%;
+  padding-top: 10px;
+}
+
+header nav {
+  float: right;
+}
+header nav ul li {
+  float: none;
+  display: inline-block;
+  margin-top: 50px;
+}
+header nav ul li a {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 115%;
+  display: block;
+  margin-right: 20px;
+}
+
+.main {
+  background-color: black;
+  width: 60%;
+  height: 75%;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+  padding-left: 5%;
+  padding-top: 4%;
+  color: #57e3ff;
+  font-weight: bold;
+  font-size: 180%;
+}
+
+article {
+  float: left;
+  width: 48%;
+}
+
+aside {
+  float: right;
+  padding: 0px;
+  width: 48%;
+}
+.signup:hover {
+  color: black;
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  margin-left: 3px;
+  top: 40%;
+}
+
+.email {
+  width: 85%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid white;
+  margin-top: 40px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+form.form {
+  padding-top: 40px;
+}
+
+.pass {
+  width: 85%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin-bottom: 50px;
+  margin-left: 46px;
+
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+/* .button {
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(to right, #2541df, #b2c2e6);
+  text-align: center;
+  border: none;
+} */
+
+.submit {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: rgb(252, 96, 96);
+  border: 0;
+  padding: 10px 30px 10px 30px;
+  margin-left: 40%;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+  color: #57e3ff;
+  padding-top: 0px;
+  margin-left: 7%;
+  margin-top: 15%;
+}
+
+.createaccount {
+  cursor: pointer;
+  border-radius: 5em;
+  color: rgb(16, 17, 18);
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 195, 0) 100%
+  );
+  border: 0.5px solid white;
+  padding: 10px 10px 10px 10px;
+  margin: 30% 0 0 15%;
+  width: 60%;
+  font-size: 13px;
+}
+
+.google {
+  cursor: pointer;
+  border-radius: 5em;
+  color: rgb(16, 17, 18);
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  border: 0.5px solid white;
+  width: 60%;
+  padding: 10px 10px 10px 10px;
+  margin: 20% 0% 25% 15%;
+  font-size: 13px;
+}
+
+/* Section 5: Footer */
+
+footer {
+  padding: 60px 0;
+  background-color: black;
+}
+#footer-info {
+  width: 380px;
+  float: left;
+  color: white;
+  margin-top: 10px;
+}
+#footer-links {
+  width: 520px;
+  float: right;
+}
+#footer-links ul {
+  width: 150px;
+  float: left;
+  margin-left: 20px;
+}
+#footer-links ul li {
+  margin: 10px 0;
+}

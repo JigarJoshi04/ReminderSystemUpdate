@@ -1,0 +1,240 @@
+/* * {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: #ddd;
+} */
+
+body {
+    background-color: rgb(31, 31, 31);
+    color: #777;
+    font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  }
+  p {
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+  }
+  a:hover {
+    color: #57e3ff;
+  }
+  h4 {
+    font-size: 24px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  h5 {
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 940px;
+  }
+  
+  /* Section 1: Header */
+  header {
+    height: 120px;
+    background-color: black;
+  }
+  .logo {
+    width: 40%;
+    padding-top: 10px;
+  }
+  
+  header nav {
+    float: right;
+  }
+  header nav ul li {
+    float: none;
+    display: inline-block;
+    margin-top: 50px;
+  }
+  header nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 115%;
+    display: block;
+    margin-right: 20px;
+  }
+  
+  /* Section 4: Primary Content */
+  
+  #primary-content {
+    background-color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .featured-cont {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 400px;
+    border-bottom: 1px solid #02b8dd;
+    padding: 0 0 20px 0;
+  }
+  
+  #primary-content a img {
+    margin: 20px 0;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+  }
+  
+  img {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  
+  .card:hover {
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Add some padding inside the card container */
+  
+  .container {
+    padding: 2px 16px;
+  }
+  
+  
+  /* calender   */
+  
+  table {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    font-family: "Ubuntu"; /*border-collapse: collapse;*/
+    border-spacing: 0;
+    background-color: #333333;
+  }
+  
+  th,
+  td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+  }
+  
+  th {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #292929;
+    letter-spacing: 1px;
+  }
+  
+  td {
+    width: 14.285%;
+    transition: all 0.3s;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 1.5% 1.5% 5%;
+    vertical-align: initial;
+    padding: 1.5% 0;
+    height: 75px;
+  }
+  
+  .day:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .today {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+  }
+  
+  span.number {
+    margin-left: 10%;
+  }
+  
+  span.event {
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 5px 10%;
+    border-radius: 2px;
+    background-color: #91c33b;
+  }
+  
+  span.event-multiday {
+    margin: 5px -2px;
+    border-radius: 0;
+  }
+  span.event-multiday-start {
+    margin-right: -4px;
+  }
+  span.event-multiday-finish {
+    margin-left: -4px;
+  }
+  
+  span.event-ghost {
+    background-color: transparent;
+  }
+  
+  /* Section 5: Footer */
+  
+  footer {
+    padding: 60px 0 50 50;
+    background-color: black;
+    height: 25%;
+  }
+  #footer-info {
+    width: 380px;
+    float: left;
+    color: white;
+    margin-top: 10px;
+  }
+  #footer-links {
+    width: 520px;
+    float: right;
+  }
+  #footer-links ul {
+    width: 150px;
+    float: left;
+    margin-left: 20px;
+  }
+  #footer-links ul li {
+    margin: 10px 0;
+  }
+  

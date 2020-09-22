@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{% static '/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css"> 
+        
+        <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+        
+        <title>Client Details</title>
+
+<style>
+  page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+a:hover{
+  color: #57e3ff;
+}
+
+content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;            /* Footer height */
+}
+</style>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="../">Home</a></li>
+         
+        </ul>
+      </nav>
+    </div>
+    <hr style="background-color: white;">
+  </header>
+<br>
+<body>
+<div class='header__item' style="color: black; text-align: center; "><h1>Client Details</h1></div>
+
+<br>
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th >#</th>
+     
+      <th scope="col" class="header__item">Email</th>
+      <th scope="col" class="header__item">Client Type</th>
+      <th scope="col" class="header__item">Staff Id</th>
+      <th scope="col" class="header__item">Ca Name</th>
+      <th scope="col" class="header__item">Client Name</th>
+      <th scope="col" class="header__item">Phone No</th>
+      <th scope="col" class="header__item">Gst No.</th>
+      <th scope="col" class="header__item">Aadhar No.</th>
+      <th scope="col" class="header__item">Pan No.</th>
+      <th scope="col" class="header__item">I.T.</th>
+      <th scope="col" class="header__item">Gst</th>
+      <th scope="col" class="header__item">C.Act</th>
+      <th scope="col" class="header__item">Acc</th>
+      <th scope="col" class="header__item">OS 1</th>
+      <th scope="col" class="header__item">OS 2</th>
+      <th scope="col" class="header__item">OS 3</th>
+      <th scope="col" class="header__item">OS 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for clients in rows %}
+    
+    <tr>
+        {% for client in clients %}
+      
+        {% if client is True %}
+        <td class="table-data">✅</td>
+        {% elif client is False %}
+        <td class="table-data">❌</td>
+        {% else %}
+        <td class="table-data">{{client}}</td>
+        
+        {% endif %}
+      
+        {% endfor %}
+    </tr>
+    {% endfor %}
+  
+  </tbody>
+</table>
+
+
+
+   </body>
+
+   <footer>
+<hr style="background-color: white;">
+
+        <p id="footer-info">Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+    
+  
+      <div class="clear"></div>
+  
+  </footer>
+
+   </html>

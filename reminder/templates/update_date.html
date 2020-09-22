@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/signup.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+    <title>Update Date</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+ 
+          <li><a href="../">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    <div class="heading"><h1>Update Date</h1></div>
+    <form method="POST" class='form'>
+      {% csrf_token %} 
+     
+      <p class='field required'>
+        
+        <label class='label required' for='type_of_detail'>
+         Service Type :</label>
+        <select class='select' id='type_of_detail' name='type_of_detail' style="padding: 3.8%;">
+          
+          <option selected value=''> </option>
+          <option value='GSTR1 due date'>GSTR1 due date</option>
+          <option value='GSTR 3B due date'>GSTR 3B due date</option>
+          <option value='GST Annual due date'>GST Annual due date</option>
+          <option value='GST audit due date'>GST audit due date</option>
+          <option value='Income tax first installment due date'>Income tax first installment due date</option>
+          <option value='Income tax second installment due date'>Income tax second installment due date</option>
+          <option value='Income tax third installment due date'>Income tax third installment due date</option>
+          <option value='Income tax fourth installment due date'>Income tax fourth installment due date</option>
+          <option value='Income tax taxreturn due date'>Income tax taxreturn due date</option>
+          <option value='Income tax auditreturn due date'>Income tax auditreturn due date</option>
+          <option value='Income tax tdsreturn due date'>Income tax tdsreturn due date</option>
+          <option value='Companies act due Return 01'>Companies act due Return 01</option>
+          <option value='Companies act due Return 02'>Companies act due Return 02</option>
+          <option value='Accounting view due Return 01'>Accounting view due Return 01</option>
+          <option value='Accounting view due Return 02'>Accounting view due Return 02</option>
+          <option value='Other Service 1'>Other Service 1</option>
+          <option value='Other Service 2'>Other Service 2</option>
+          <option value='Other Service 3'>Other Service 3</option>
+          <option value='Other Service 4'>Other Service 4</option>
+        </select>
+      </p>
+
+      <p class='field required half error'>
+        <label class='label required' for='new_date_of_deadline'>
+         Updated Due Date:</label>
+        <input class='text-input' id='new_date_of_deadline' name='new_date_of_deadline' required type='date'>
+        
+      </p>
+      <p class='field half'>
+        
+        <label class='label required' for='new_actual_date_on_which_reminder_is_to_be_sent'>
+          Remind Before :</label>
+        <select class='select' id='new_actual_date_on_which_reminder_is_to_be_sent' name='new_actual_date_on_which_reminder_is_to_be_sent' style="padding: 3.8%;">
+          
+          <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+        </select>
+      </p>
+      
+      <p class='field required half'>
+        <input class='button' type='submit' value='Login'>
+      </p>
+
+     </form>
+
+   </div>
+  </body>
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+        </div>
+      
+      <div class="clear"></div>
+    </div>
+  </footer>
+ </html>

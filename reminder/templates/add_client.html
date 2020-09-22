@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/add_client.css' %}">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Register</title>
+
+  </head>
+  <body>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+          <li><a href="../login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    <div class="heading"><h1>Create a Client Account</h1></div>
+    <form method="POST" class='form' action="./">
+      {% csrf_token %} 
+
+      <div class='field'>
+        <label class='label'>Client type</label>
+        <ul class='options'>
+          <li class='option'>
+            <input class='option-input' id='Individual' name='client_type' type='radio' value='Individual'>
+            <label class='option-label' for='Individual' >Individual</label>
+          </li>
+          <li class='option'>
+            <input class='option-input' id='Company' name='client_type' type='radio' value='Company'>
+            <label class='option-label' for='Company'>Company</label>
+          </li>
+        </ul>
+      </div>
+
+      <p class='field required'>
+        <label class='label' for='client_name'>Name</label>
+        <input class='text-input' id='client_name' name='client_name' required type='text'>
+      </p>
+     
+      <p class='field required half'>
+        <label class='label' for='email'>E-mail</label>
+        <input class='text-input' id='email' name='email' required type='email'>
+      </p>
+      <p class='field half required'>
+        <label class='label' for='phone'>Phone</label>
+        <input class='text-input' id='phone' name='phone'  required type="text">
+      </p>
+      
+      <p class='field required half'>
+        <label class='label' for='aadhar'>Aadhar Number</label>
+        <input class='text-input' id='email' name='aadhar' required type='text'>
+      </p>
+      <p class='field half required'>
+        <label class='label' for='gst'>GST</label>
+        <input class='text-input' id='phone' name='gst' required type='text'>
+      </p>
+      <p class='field required'>
+        <label class='label' for='pan'>Pan Number</label>
+        <input class='text-input' id='email' name='pan' required type='text'>
+      </p>
+
+      <div class='field'>
+        <label class='label'>Select the Services</label>
+        <ul class='checkboxes'>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check01' name='check_01' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check01'>Income Tax</label>
+          </li>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check02' name='check_02' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check02'>GST</label>
+          </li>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check03' name='check_03' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check03'>Accounting</label>
+          </li>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check04' name='check_04' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check04'>Companies Act</label>
+          </li>
+
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check05' name='check_05' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check05'>Other Service 1</label>
+          </li>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check06' name='check_06' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check06'>Other Service 2</label>
+          </li>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check07' name='check_07' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check07'>Other Service 3</label>
+          </li>
+          <li class='checkbox'>
+            <input class='checkbox-input' id='check08' name='check_08' type='checkbox' value='1'>
+            <label class='checkbox-label' for='check08'>Other Service 4</label>
+          </li>
+        </ul>
+      </div>
+
+      <p class='field half'>
+        <input class='button' type='submit' value='Submit'>
+      </p>
+      
+    </form>
+  </div>
+ 
+  <footer>
+  <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+       
+      </div>
+      
+      <div class="clear"></div>
+    </div>
+  </footer>
+
+</body>
+</html>

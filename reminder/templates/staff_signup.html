@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/signup.css' %}">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Register</title>
+
+  </head>
+  <body>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+          <li><a href="../staff_login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    <div class="heading"><h1>Create an Account</h1></div>
+    <form method="POST" class='form' action="./">
+      {% csrf_token %} 
+      <p class='field required'>
+        <label class='label required' for='username'>Username</label>
+        <input class='text-input' id='name' name='username' required type='text'>
+      </p>
+      <p class='field required'>
+        <label class='label' for='ca_name'>CA Name</label>
+        <input class='text-input' id='ca_name' name='ca_name' required type='text'>
+      </p>
+
+      <p class='field required half'>
+        <label class='label' for='firstname'>First Name</label>
+        <input class='text-input' id='firstname' name='firstname' required type='text'>
+      </p>
+      <p class='field half required'>
+        <label class='label' for='lastname'>Last Name</label>
+        <input class='text-input' id='lastname' name='lastname' required type='text'>
+      </p>
+      <p class='field required half'>
+        <label class='label' for='email'>E-mail</label>
+        <input class='text-input' id='email' name='email' required type='email'>
+      </p>
+      <p class='field half required'>
+        <label class='label' for='phone'>Phone</label>
+        <input class='text-input' id='phone' name='phone'  required type="text">
+      </p>
+      <p class='field half required error'>
+        <label class='label' for='password'>Password</label>
+        <input class='text-input' id='password' name='password' required type='password'>
+      </p>
+      <p class='field half required error'>
+        <label class='label' for='repass'>Re-Password</label>
+        <input class='text-input' id='password' name='repass' required type='password'>
+      </p>
+     
+      
+      <p class='field half'>
+        <input class='button' type='submit' value='Send'>
+      </p>
+      
+    </form>
+  </div>
+ 
+  <footer>
+    <hr>
+      <div class="wrapper">
+        <div id="footer-info">
+          <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+        </div>
+        
+        <div class="clear"></div>
+      </div>
+    </footer>
+
+</body>
+</html>

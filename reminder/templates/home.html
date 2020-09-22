@@ -1,0 +1,155 @@
+
+{% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Reminder</title>
+  <body>
+    <header>
+      <div class="wrapper">
+        <span class="color"
+          ><img class="logo" src="{% static 'images\logo.png' %}" alt="logo"
+        /></span>
+
+        <nav>
+          <ul>
+            <li><a href="..">Home</a></li>
+            <li><a href="#primary-content">Services</a></li>
+        
+          </ul>
+        </nav>
+      </div>
+    
+    </header>
+    <hr>
+
+    <div id="hero-image">
+    
+ 
+        <article class="clock">
+          <div class="wrap">
+            <span class="hour"></span>
+            <span class="minute"></span>
+            <span class="second"></span>
+      
+          </div>
+        </article>
+
+        <div class="wrapper">
+          <h2 class="title">
+          <strong>Never Miss</strong><br />
+          any Reminder.
+        </h2>
+        <div class="buttons">
+        <a href="ca_login" class="button-1">CA Login</a>
+       <a href="staff_login" class="button-1">Add Client</a>
+      </div>
+      </div>
+   
+    </div>
+<!-- <hr>
+    <div id="features">
+      <div class="wrapper">
+        <ul>
+          <li class="feature-1">
+            <img class="feature1" src="{% static 'images/feature1.png' %}" alt="" />
+            <h3>Email Reminders</h3>
+          </li>
+          <li class="feature-2">
+            <img class="feature2" src="{% static 'images/feature2.png' %}" alt="" />
+            <h3>Simple To Use</h3>
+          </li>
+          <li class="feature-3">
+            <img class="feature3" src="{% static 'images/feature3.png' %}" alt="" />
+            <h3>Schedule at your fingertips</h3>
+          </li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+    </div> -->
+<hr>
+    <div id="primary-content">
+      <div class="wrapper">
+        <article>
+          <h4 class="featured-cont">Featured Content</h4>
+          <p>
+
+<div class="cards">
+            <div class="card" onclick="window.location='staff_login'" style="width:100%">
+              <img src="{% static 'images/incometax.png' %}"  alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4><b>Income Tax Act</b></h4>
+                <p>Income Tax file-up reminder</p>
+              </div>
+            </div>
+
+            <div class="card" onclick="window.location='staff_login'" style="width:100%">
+              <img src="{% static 'images/GST.png' %}" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4><b>GST Act</b></h4>
+                <p>GST return file-up reminder</p>
+              </div>
+            </div>
+
+            <div class="card" onclick="window.location='staff_login'" style="width:100%">
+              <img src="{% static 'images/Accounting.png' %}" alt="Avatar" style="width:100% ; height:55% ">
+              <div class="container">
+                <h4><b>Accounting ACT</b></h4>
+                <p>Accounting file-up reminder</p>
+              </div>
+            </div>
+
+            <div class="card" onclick="window.location='staff_login'" style="width:100%">
+              <img src="{% static 'images/Company_Act.png' %}" alt="Avatar" style="width:100%" >
+              <div class="container">
+                <h4><b>Companies Act</b></h4>
+                <p>Companies Act file-up reminder</p>
+              </div>
+            </div>
+          </div>
+          </p>
+        </article>
+      </div>
+    </div>
+  
+<script>
+var inc = 1000;
+
+clock();
+
+function clock() {
+  const date = new Date();
+
+  const hours = ((date.getHours() + 11) % 12 + 1);
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  
+  const hour = hours * 30;
+  const minute = minutes * 6;
+  const second = seconds * 6;
+  
+  document.querySelector('.hour').style.transform = `rotate(${hour}deg)`
+  document.querySelector('.minute').style.transform = `rotate(${minute}deg)`
+  document.querySelector('.second').style.transform = `rotate(${second}deg)`
+}
+
+setInterval(clock, inc);
+
+
+
+</script>
+
+
+  </body>
+  <hr>
+    <footer>
+  
+      <div class="wrapper">
+        <div id="footer-info">
+          <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+           </div>
+       
+        <div class="clear"></div>
+      </div>
+    </footer>
+ 

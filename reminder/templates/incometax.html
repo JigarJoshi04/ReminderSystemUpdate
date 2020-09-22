@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/signup.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+    <title>Income Tax</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    
+    <form method="POST" class='form'>
+      <p class='field'>  <div class="heading"><h1>Advance Tax</h1></div></p>
+      {% csrf_token %} 
+      <p class='field '></p>
+
+      <p class='field required half error'>
+        <label class='label required' for='first_install'>
+			First Installment Due Date:</label>
+        <input class='text-input' id='first_install' name='first_install' required type='date'>
+    </p>
+   
+    <p class='field half'>
+        
+      <label class='label required' for='first_install_reminder_before'>
+        Remind Before :</label>
+      <select class='select' id='first_install_reminder_before' name='first_install_reminder_before' style="padding: 3.8%;">
+        
+        <option selected value='3'>3 Days</option>
+        <option value='5'>5 Days</option>
+        <option value='10'>10 Days</option>
+        <option value='15'>15 Days</option>
+        <option value='30'>30 Days</option>
+        <option value='60'>60 Days</option>
+        <option value='90'>90 Days</option>
+      </select>
+    </p>
+
+
+	  <p class='field required half error'>
+        <label class='label required' for='second_install'>
+			Second Installment Due Date:</label>
+        <input class='text-input' id='second_install' name='second_install' required type='date'>
+    </p>
+    <p class='field half'>
+        
+      <label class='label required' for='second_install_reminder_before'>
+        Remind Before :</label>
+      <select class='select' id='second_install_reminder_before' name='second_install_reminder_before' style="padding: 3.8%;">
+        
+        <option selected value='3'>3 Days</option>
+        <option value='5'>5 Days</option>
+        <option value='10'>10 Days</option>
+        <option value='15'>15 Days</option>
+        <option value='30'>30 Days</option>
+        <option value='60'>60 Days</option>
+        <option value='90'>90 Days</option>
+      </select>
+    </p>
+
+	  <p class='field required half error'>
+        <label class='label required' for='third_install'>
+			Third Installment Due Date:</label>
+        <input class='text-input' id='third_install' name='third_install' required type='date'>
+    </p>
+    <p class='field half'>
+        
+      <label class='label required' for='third_install_reminder_before'>
+        Remind Before :</label>
+      <select class='select' id='third_install_reminder_before' name='third_install_reminder_before' style="padding: 3.8%;">
+        
+        <option selected value='3'>3 Days</option>
+        <option value='5'>5 Days</option>
+        <option value='10'>10 Days</option>
+        <option value='15'>15 Days</option>
+        <option value='30'>30 Days</option>
+        <option value='60'>60 Days</option>
+        <option value='90'>90 Days</option>
+      </select>
+    </p>
+
+	  <p class='field required half error'>
+        <label class='label required' for='fourth_install'>
+			Fourth Installment Due Date:</label>
+        <input class='text-input' id='fourth_install' name='fourth_install' required type='date'>
+      </p>
+
+      <p class='field half'>
+        
+        <label class='label required' for='fourth_install_reminder_before'>
+          Remind Before :</label>
+        <select class='select' id='fourth_install_reminder_before' name='fourth_install_reminder_before' style="padding: 3.8%;">
+          
+          <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+        </select>
+      </p>
+
+  <p><h2>................................................................................................</h2></p>
+  <p class='field required half error'>
+	<label class='label required' for='taxreturn'>
+		Tax Return Date:</label>
+	<input class='text-input' id='taxreturn' name='taxreturn' required type='date'>
+  </p>
+
+  <p class='field half'>
+        
+    <label class='label required' for='tax_return_reminder_before'>
+      Remind Before :</label>
+    <select class='select' id='tax_return_reminder_before' name='tax_return_reminder_before' style="padding: 3.8%;">
+      
+      <option selected value='3'>3 Days</option>
+      <option value='5'>5 Days</option>
+      <option value='10'>10 Days</option>
+      <option value='15'>15 Days</option>
+      <option value='30'>30 Days</option>
+      <option value='60'>60 Days</option>
+      <option value='90'>90 Days</option>
+    </select>
+  </p>
+  <p><h2>................................................................................................</h2></p>
+      <p class='field required half error'>
+       
+        <label class='label required' for='tdsreturn'>
+			TDS Return Date:
+		</label>
+        <input class='text-input' id='tdsreturn' name='tdsreturn' required type='date'>
+      </p>
+      
+  <p class='field half'>
+        
+    <label class='label required' for='tds_return_reminder_before'>
+      Remind Before :</label>
+    <select class='select' id='tds_return_reminder_before' name='tds_return_reminder_before' style="padding: 3.8%;">
+      
+      <option selected value='3'>3 Days</option>
+      <option value='5'>5 Days</option>
+      <option value='10'>10 Days</option>
+      <option value='15'>15 Days</option>
+      <option value='30'>30 Days</option>
+      <option value='60'>60 Days</option>
+      <option value='90'>90 Days</option>
+    </select>
+  </p>
+      <p><h2>................................................................................................</h2></p>
+      <p class='field required half error'>
+       
+        <label class='label required' for='audit'>
+			Audit Date:
+		</label>
+        <input class='text-input' id='audit' name='audit' required type='date'>
+      </p>
+
+     
+  <p class='field half'>
+        
+    <label class='label required' for='audit_reminder_before'>
+      Remind Before :</label>
+    <select class='select' id='audit_reminder_before' name='audit_reminder_before' style="padding: 3.8%;">
+      
+      <option selected value='3'>3 Days</option>
+      <option value='5'>5 Days</option>
+      <option value='10'>10 Days</option>
+      <option value='15'>15 Days</option>
+      <option value='30'>30 Days</option>
+      <option value='60'>60 Days</option>
+      <option value='90'>90 Days</option>
+    </select>
+  </p>
+	 
+	  <p class='field required'></p>
+      <p class='field required half'>
+        <input class='button' type='submit' value='Submit'>
+      </p>
+     </form>
+   </div>
+  
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+       </div>
+     
+      <div class="clear"></div>
+    </div>
+  </footer>
+   </body>
+   </html>

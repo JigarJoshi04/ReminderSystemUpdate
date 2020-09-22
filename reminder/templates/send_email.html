@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/add_client.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+      
+    <title>Send Email</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+        
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    <div class="heading"><h1>Custom Mail</h1></div>
+    <form method="POST" class='form'>
+      {% csrf_token %} 
+     
+      <p class='field required'>
+        
+        <label class='label required' for='service_name'>
+         Service Name :</label>
+        <select class='select' id='service_name' name='service_name' style="padding: 3.8%;">
+          
+          <option selected value=''> </option>
+          <option value='gst_tax_activate'>GST Tax</option>
+          <option value='income_tax_activate'>Income Tax</option>
+          <option value='companies_activate'>Companies Act</option>
+          <option value='accounting_activate'>Accounting</option>
+          <option value='other_service1'>Other Service 1</option>
+          <option value='other_service2'>Other Service 2</option>
+          <option value='other_service3'>Other Service 3</option>
+          <option value='other_service4'>Other Service 4</option>
+        </select>
+      </p>
+
+      <p class='field'>
+        <label class='label' for='subject_mail'>Subject of Email:</label>
+        <textarea class='textarea' cols='10' id='subject_mail' name='subject_mail' rows='2'></textarea>
+      </p>
+      
+      <p class='field'>
+        <label class='label' for='email_body'>Body of Email:</label>
+        <textarea class='textarea' cols='50' id='email_body' name='email_body' rows='10'></textarea>
+      </p>
+      
+      <p class='field '>
+      </p>
+      <p class='field required half'>
+        <input class='button' type='submit' value='Send Email'>
+      </p>
+
+     </form>
+    
+   </div>
+  </body>
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+         </div>
+     
+      <div class="clear"></div>
+    </div>
+  </footer>
+ </html>

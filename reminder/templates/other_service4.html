@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/signup.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+    <title>Other Service 4</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    
+    <form method="POST" class='form'>
+      {% csrf_token %} 
+      <div class="heading" ><h1>Other Service 4</h1></div>
+
+      <p class='field'></p>
+      <p class='field required '>
+        <label class='label required' for='service_type'>Name of Service</label>
+        <input class='text-input' id='service_type' name='service_type' required type='text'>
+      </p>
+      <p class='field required '>
+        <p class='field'>
+          <label class='label' for='select'>Duration</label>
+          <select class='select' id='duration_1' name='duration_1'>
+            <option selected value='monthly'>Monthly</option>
+            <option value='quaterly'>Quaterly</option>
+            <option value='half_yearly'>Half-Yearly</option>
+            <option value='yearly'>Yearly</option>
+          </select>
+        </p>
+        </p>
+       <p class='field required half error'>
+        <label class='label required' for='Return_1'>
+          Return 1 Due Date:</label>
+        <input class='text-input' id='Return_1' name='Return_1' required type='date'>
+      </p>
+      <p class='field half'>
+        
+        <label class='label required' for='Return_1_reminder_before'>
+          Remind Before :</label>
+        <select class='select' id='Return_1_reminder_before' name='Return_1_reminder_before' style="padding: 3.8%;">
+          
+          <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+        </select>
+      </p>
+     
+    
+      <p class='field required'></p>
+      <p class='field required half'>
+        <input class='button' type='submit' value='Submit'>
+      </p>
+     </form>
+   </div>
+  
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+         </div>
+
+      <div class="clear"></div>
+    </div>
+  </footer>
+   </body>
+   </html>

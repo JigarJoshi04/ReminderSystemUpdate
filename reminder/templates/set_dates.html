@@ -1,0 +1,131 @@
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+      <!-- <link rel="stylesheet" type="text/css" href="../static/card.css"> -->
+      <!-- {% load static %} -->
+      <link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+     
+      <title>Set Dates</title>
+    </head>
+    <body onload="startTime()">
+      <header>
+        <div class="wrapper">
+          <span class="color">
+              <!-- <img class="logo" src="..\static\images\logo.png" alt="" /> -->
+            <img class="logo" src="{% static 'images\logo.png' %}" alt="" />
+          </span>
+  
+          <nav>
+            <ul>
+              <li><a href="..">Home</a></li>
+                         
+            </ul>
+		  </nav>
+		
+		</div>
+
+      </header>
+	  <hr>
+	  
+	  <div id="primary-content">
+		<div class="wrapper">
+		  <article>
+			<h4 class="featured-cont">Featured Content</h4>
+			<p>
+  
+  <div class="cards">
+			  <div class="card" onclick="window.location='incometax'" style="width:100%">
+				<img src="{% static 'images/incometax.png' %}"  alt="Avatar" style="width:100%">
+				<div class="container">
+				  <h4><b>Income Tax Act</b></h4>
+				  <p>Income Tax file-up reminder</p>
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='gst'" style="width:100%">
+				<img src="{% static 'images/GST.png' %}" alt="Avatar" style="width:100%">
+				<div class="container">
+				  <h4><b>GST Act</b></h4>
+				  <p>GST return file-up reminder</p>
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='accounting'" style="width:100%">
+				<img src="{% static 'images/Accounting.png' %}" alt="Avatar" style="width:100% ; height:55% ">
+				<div class="container">
+				  <h4><b>Accounting ACT</b></h4>
+				  <p>Accounting file-up reminder</p>
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='companies_act'" style="width:100%">
+				<img src="{% static 'images/Company_Act.png' %}" alt="Avatar" style="width:100%" >
+				<div class="container">
+				  <h4><b>Companies Act</b></h4>
+				  <p>Companies Act file-up reminder</p>
+				</div>
+			  </div>
+			</div>
+		
+
+
+	  <div class="cards">
+		<div class="card" onclick="window.location='other_service1'" style="width:100%">
+		 
+		  <div class="container">
+			<h4><b>Other Services 1</b></h4>
+		  </div>
+		</div>
+
+		<div class="card" onclick="window.location='other_service2'" style="width:100%">
+		 
+		  <div class="container">
+			<h4><b>Other Services 2</b></h4>
+		  </div>
+		</div>
+
+		<div class="card" onclick="window.location='other_service3'" style="width:100%">
+		 
+		  <div class="container">
+			<h4><b>Other Services 3</b></h4>
+			
+		  </div>
+		</div>
+
+		<div class="card" onclick="window.location='other_service4'" style="width:100%">
+		
+		  <div class="container">
+			<h4><b>Other Services 4</b></h4>
+		
+		  </div>
+		</div>
+	  </div>
+	  </p>
+	</article>
+  </div>
+</div>
+
+
+ 
+  
+</body>
+
+      <footer>
+        <hr>
+        <div class="wrapper">
+          <div id="footer-info">
+            <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+          </div>
+         
+          <div class="clear"></div>
+        </div>
+      </footer>
+  
+
+  </html>

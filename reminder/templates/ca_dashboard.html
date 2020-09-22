@@ -1,0 +1,167 @@
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+      <!-- <link rel="stylesheet" type="text/css" href="../static/card.css"> -->
+      <!-- {% load static %} -->
+      <link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+     
+      <title>CA Dashboard</title>
+    </head>
+    <body>
+      <header>
+        <div class="wrapper">
+          <span class="color">
+              <!-- <img class="logo" src="..\static\images\logo.png" alt="" /> -->
+            <img class="logo" src="{% static 'images\logo.png' %}" alt="" />
+          </span>
+  
+          <nav>
+            <ul>
+           
+              <li><a href="../../../../logout">logout</a></li>
+          
+           
+            </ul>
+		  </nav>
+		
+		</div>
+
+      </header>
+	  <hr>
+	  
+	  <div id="primary-content">
+		<div class="wrapper">
+		  <article>
+			<h4 class="featured-cont">Featured Content</h4>
+			<p>
+  
+  <div class="cards">
+			  <div class="card" onclick="window.location='set_dates'" style="width:100%">
+			
+				<div class="container">
+				  <h4><b>Set Dates</b></h4>
+				 
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='update_date'" style="width:100%">
+				
+				<div class="container">
+				  <h4><b>Update Date</b></h4>
+		
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='delete_client'" style="width:100%">
+			
+				<div class="container">
+				  <h4><b>Delete Client</b></h4>
+			
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='send_email'" style="width:100%">
+		
+				<div class="container">
+				  <h4><b>Send Email</b></h4>
+		
+				</div>
+			  </div>
+      </div>
+      
+
+      <div class="cards">
+			  <div class="card" onclick="window.location='completed_tasks'" style="width:100%">
+			
+				<div class="container">
+				  <h4><b>Completed Tasks</b></h4>
+				 
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='pending_tasks'" style="width:100%">
+				
+				<div class="container">
+				  <h4><b>Pending Tasks</b></h4>
+	
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='failed_tasks'" style="width:100%">
+			
+				<div class="container">
+				  <h4><b>Failed Tasks</b></h4>
+		
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='client_details'" style="width:100%">
+		
+				<div class="container">
+				  <h4><b>Client Details</b></h4>
+
+				</div>
+			  </div>
+			</div>
+
+			<div class="cards">
+				<div class="card" onclick="window.location='add_client'" style="width:100%">
+			  
+				  <div class="container">
+					<h4><b>Add Client</b></h4>
+				   
+				  </div>
+				</div>
+	
+				<div class="card" onclick="window.location='update_client'" style="width:100%">
+				  
+				  <div class="container">
+					<h4><b>Update Client</b></h4>
+		
+				  </div>
+				</div>
+	
+				<div class="card" onclick="window.location='change_email_body'" style="width:100%">
+			  
+				  <div class="container">
+					<h4><b>Change Mail Body</b></h4>
+	
+				  </div>
+				</div>
+	
+				<div class="card" onclick="window.location='#'" style="width:100%">
+		  
+				  <div class="container">
+					<h4><b>Etc</b></h4>
+		
+				  </div>
+				</div>
+			  </div>
+
+			</p>
+		  </article>
+		</div>
+	  </div>
+
+
+</body>
+
+      <footer>
+        <hr>
+        <div class="wrapper">
+          <div id="footer-info">
+            <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+           
+          </div>
+         
+          <div class="clear"></div>
+        </div>
+      </footer>
+
+  </html>

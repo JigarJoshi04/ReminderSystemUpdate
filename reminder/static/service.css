@@ -1,0 +1,247 @@
+/* * {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: #ddd;
+} */
+
+body {
+  background-color: #111111;
+  font-family: "Titillium Web", sans-serif;
+}
+p {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(202, 202, 202);
+}
+a:hover {
+  color: #57e3ff;
+}
+h4 {
+  font-size: 24px;
+  color: #444;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 15px;
+  color: rgb(202, 202, 202);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+
+/* Section 1: Header */
+header {
+  height: 120px;
+  background-color: black;
+}
+.logo {
+  width: 40%;
+  padding-top: 10px;
+}
+
+header nav {
+  float: right;
+}
+header nav ul li {
+  float: none;
+  display: inline-block;
+  margin-top: 50px;
+}
+header nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 115%;
+  display: block;
+  margin-right: 20px;
+}
+/* Section 2: Cards */
+.boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.check-card {
+  list-style: none;
+  margin: 40px ;
+  margin-top: 15%;
+  width: 480px;
+}
+.check-card .check-card-item {
+  position: relative;
+  width: 90%;
+  margin: 0 1% 15px;
+  font-size: 16px;
+  background: #2e2d37;
+  overflow: hidden;
+}
+.check-card li label {
+  display: block;
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  z-index: 100;
+  cursor: pointer;
+}
+.check-card .check-card-body {
+  height: 300px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+.check-card .check-card-body-in {
+  padding: 40px 20px 20px;
+}
+.check-card .check-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+.check-card .check-card-bg,
+.check-card .check-card-toggle {
+  position: relative;
+  background: #57e3ff;
+  width: 36px;
+  height: 36px;
+  top: 10px;
+  left: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.check-card .check-card-bg {
+  position: absolute;
+  background: #57e3ff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  z-index: 0;
+}
+.check-card .check-card-toggle span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  margin-left: -10px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+}
+.check-card .check-card-toggle span:first-child {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.check-card .check-card-cancel {
+  font-size: 18px;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  padding: 10px 0 7px;
+  text-align: center;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 7%;
+  width: 86%;
+  -webkit-transition: all 0.3s cubic-bezier(0.5, -0.8, 0.5, 1.8);
+  transition: all 0.3s cubic-bezier(0.5, -0.8, 0.5, 1.8);
+}
+.check-card input[type="checkbox"] {
+  display: none;
+}
+.check-card
+  input[type="checkbox"]:checked
+  ~ .check-card-body
+  .check-card-toggle
+  span {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.check-card
+  input[type="checkbox"]:checked
+  ~ .check-card-body
+  .check-card-toggle
+  span:first-child {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.check-card input[type="checkbox"]:checked ~ .check-card-bg {
+  -webkit-transform: scale(25);
+  transform: scale(25);
+}
+.check-card
+  input[type="checkbox"]:checked
+  ~ .check-card-body
+  .check-card-cancel {
+  bottom: 30px;
+}
+
+/* button */
+
+.button {
+  display: block;
+  text-align: center;
+  background: rgb(252, 96, 96);
+  font-weight: bold;
+  color: #fff;
+  width: 200px;
+  height: 70px;
+  font-size: 30px;
+  line-height: 50px;
+  margin: 5% 40% 5% 43%;
+  cursor: pointer;
+}
+
+
+
+/* Section 5: Footer */
+
+footer {
+  padding: 60px 0 50 50;
+  background-color: black;
+  height: 25%;
+}
+#footer-info {
+  width: 380px;
+  float: left;
+  color: white;
+  margin-top: 10px;
+}
+#footer-links {
+  width: 520px;
+  float: right;
+}
+#footer-links ul {
+  width: 150px;
+  float: left;
+  margin-left: 20px;
+}
+#footer-links ul li {
+  margin: 10px 0;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/signup.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+    <title>GST</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    
+    <form method="POST" class='form'>
+      <div class="heading"><h1>GSTR1</h1></div>
+      {% csrf_token %} 
+      <p class='field required '>
+      <p class='field'>
+        <label class='label' for='select'>Duration</label>
+        <select class='select' id='duration_1' name='duration_1'>
+          <option selected value='monthly'>Monthly</option>
+          <option value='quaterly'>Quaterly</option>
+          <option value='half_yearly'>Half-Yearly</option>
+          <option value='yearly'>Yearly</option>
+        </select>
+      </p>
+      </p>
+
+    
+      <p class='field required half error'>
+        <label class='label required' for='first_due_GSTR1'>
+           First Due Date:</label>
+        <input class='text-input' id='first_due_GSTR1' name='first_due_GSTR1' required type='date'>
+        
+      </p>
+      <p class='field half'>
+        
+        <label class='label required' for='first_due_GSTR1_reminder_before'>
+          Remind Before :</label>
+        <select class='select' id='first_due_GSTR1_reminder_before' name='first_due_GSTR1_reminder_before' style="padding: 3.8%;">
+          
+          <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+        </select>
+      </p>
+      <p><h2>................................................................................................</h2></p>
+      <p class='field'>
+      <div class="heading"><h1>GSTR3B</h1></div></p>
+
+       
+        <p class='field required '>
+          <p class='field'>
+            <label class='label' for='select'>Duration</label>
+            <select class='select' id='duration_3' name='duration_3'>
+              
+              <option selected value='monthly'>Monthly</option>
+              <option value='quaterly'>Quaterly</option>
+              <option value='half_yearly'>Half-Yearly</option>
+              <option value='yearly'>Yearly</option>
+            </select>
+          </p>
+          </p>
+
+        
+          <p class='field required half error'>
+        <label class='label required' for='first_due_GSTR3B'>
+          First Due Date:</label>
+        <input class='text-input' id='first_due_GSTR3B' name='first_due_GSTR3B' required type='date'>
+      </p>
+      <p class='field half'>
+        
+            <label class='label required' for='first_due_GSTR3B_reminder_before'>
+              Remind Before :</label>
+            <select class='select' id='first_due_GSTR3B_reminder_before' name='first_due_GSTR3B_reminder_before' style="padding: 3.8%;">
+              
+              <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+            </select>
+          </p>
+  
+      <p><h2>................................................................................................</h2></p>
+     
+      <p class='field required half error'>
+       
+        <label class='label required' for='annual_return'>
+          Annual Return Date:</label>
+        <input class='text-input' id='annual_return' name='annual_return' required type='date'>
+      </p>
+      <p class='field half'>
+        
+        <label class='label required' for='annual_return_reminder_before'>
+          Remind Before :</label>
+        <select class='select' id='annual_return_reminder_before' name='annual_return_reminder_before' style="padding: 3.8%;">
+          
+          <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+        </select>
+      </p>
+      <p><h2>................................................................................................</h2></p>
+      
+      <p class='field required half error'>
+       
+        <label class='label required' for='audit'>
+			Audit Date:
+		</label>
+        <input class='text-input' id='audit' name='audit' required type='date'>
+      </p>
+      <p class='field half'>
+        
+        <label class='label required' for='audit_return_reminder_before'>
+          Remind Before :</label>
+        <select class='select' id='audit_return_reminder_before' name='audit_return_reminder_before' style="padding: 3.8%;">
+          
+          <option selected value='3'>3 Days</option>
+          <option value='5'>5 Days</option>
+          <option value='10'>10 Days</option>
+          <option value='15'>15 Days</option>
+          <option value='30'>30 Days</option>
+          <option value='60'>60 Days</option>
+          <option value='90'>90 Days</option>
+        </select>
+      </p>
+
+      <p class='field required'></p>
+      <p class='field required half'>
+        <input class='button' type='submit' value='Submit'>
+      </p>
+     </form>
+   </div>
+
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+       </div>
+      
+      <div class="clear"></div>
+    </div>
+  </footer>
+   </body>
+   </html>

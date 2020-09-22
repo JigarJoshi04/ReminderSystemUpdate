@@ -1,0 +1,147 @@
+
+body {
+  background-color: rgb(31, 31, 31);
+  color: white;
+  font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+p {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(202, 202, 202);
+}
+a:hover {
+  color: #57e3ff;
+}
+h4 {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 15px;
+  color: rgb(202, 202, 202);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+
+/* Section 1: Header */
+header {
+  height: 120px;
+  background-color: black;
+}
+.logo {
+  width: 40%;
+  padding-top: 10px;
+}
+
+header nav {
+  float: right;
+}
+header nav ul li {
+  float: none;
+  display: inline-block;
+  margin-top: 50px;
+}
+header nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 115%;
+  display: block;
+  margin-right: 20px;
+}
+
+/* Section table */
+
+
+
+.container {
+  max-width: 1000px;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.table {
+  width: 150%;
+  border: 1px solid #EEEEEE;
+}
+
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #000;
+  padding: 18px 0;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: 18px 0;
+}
+.table-row:nth-of-type(odd) {
+  background: #EEEEEE;
+  color: black;
+}
+
+
+.table-data, .header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.header__item {
+  color: white;
+  text-transform: uppercase;
+}
+
+.filter__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+/* Section 5: Footer */
+
+footer {
+  padding: 60px 0 50 50;
+  background-color: black;
+  height: 25%;
+}
+#footer-info {
+  width: 380px;
+  float: left;
+  color: white;
+  margin-top: 10px;
+}
+#footer-links {
+  width: 520px;
+  float: right;
+}
+#footer-links ul {
+  width: 150px;
+  float: left;
+  margin-left: 20px;
+}
+#footer-links ul li {
+  margin: 10px 0;
+}

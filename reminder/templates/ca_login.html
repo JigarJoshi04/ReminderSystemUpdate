@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/signup.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+    <title>Login</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="..">Home</a></li>
+          <li><a href="../ca_signup">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+  <div class="main">
+    <div class="heading"><h1>CA Login</h1></div>
+    <form method="POST" class='form'>
+      {% csrf_token %} 
+      <p class='field required '>
+        <label class='label required' for='email'>Email</label>
+        <input class='text-input' id='email' name='email' required type='text'>
+      </p>
+      <p class='field required error'>
+        <label class='label required' for='password'>Password</label>
+        <input class='text-input' id='name' name='password' required type='password'>
+      </p>
+      
+      <p class='field required half'>
+        <input class='button' type='submit' value='Login'>
+      </p>
+
+     </form>
+     <a href="../ca_signup" style="margin-left: 41%;">Do not have an account?</a>
+   </div>
+  </body>
+   <footer>
+    <hr>
+    <div class="wrapper">
+      <div id="footer-info">
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+       </div>
+    
+      <div class="clear"></div>
+    </div>
+  </footer>
+ </html>

@@ -1,0 +1,82 @@
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+      <!-- <link rel="stylesheet" type="text/css" href="../static/card.css"> -->
+      <!-- {% load static %} -->
+      <link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+     
+      <title>Staff Dashboard</title>
+    </head>
+    <body>
+      <header>
+        <div class="wrapper">
+          <span class="color">
+              <!-- <img class="logo" src="..\static\images\logo.png" alt="" /> -->
+            <img class="logo" src="{% static 'images\logo.png' %}" alt="" />
+          </span>
+  
+          <nav>
+            <ul>
+              <li><a href="../../../../logout">logout</a></li>
+            </ul>
+		  </nav>
+		
+		</div>
+
+      </header>
+	  <hr>
+	  
+	  <div id="primary-content">
+		<div class="wrapper">
+		  <article>
+			<h4 class="featured-cont">Staff Dashboard</h4>
+			<p>
+  
+  <div class="cards">
+			  
+			  <div class="card" onclick="window.location='add_client'" style="width:100%">
+			
+				<div class="container">
+				  <h4><b>Add Client</b></h4>
+				
+				</div>
+			  </div>
+  
+			  <div class="card" onclick="window.location='update_client'" style="width:100%">
+		
+				<div class="container">
+				  <h4><b>Update Client</b></h4>
+		
+				</div>
+			  </div>
+			</div>
+			</p>
+		  </article>
+		</div>
+	  </div>
+
+
+
+
+
+  
+</body>
+
+      <footer>
+        <hr>
+        <div class="wrapper">
+          <div id="footer-info">
+            <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </footer>
+  
+
+  </html>

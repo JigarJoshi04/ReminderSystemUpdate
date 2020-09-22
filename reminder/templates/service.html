@@ -1,0 +1,152 @@
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+        rel="stylesheet"
+      />
+      <!-- <link rel="stylesheet" type="text/css" href="../static/card.css"> -->
+      <!-- {% load static %} -->
+      <link rel="stylesheet" type="text/css" href="{% static 'service.css' %}">
+     
+      <title>Services</title>
+    </head>
+    <body>
+      <header>
+        <div class="wrapper">
+          <span class="color">
+              <!-- <img class="logo" src="..\static\images\logo.png" alt="" /> -->
+            <img class="logo" src="{% static 'images\logo.png' %}" alt="" />
+          </span>
+  
+          <nav>
+            <ul>
+              <li><a href="..">Home</a></li>
+          
+              <li><a >Welcome Ansh</a></li>
+           
+            </ul>
+          </nav>
+        </div>
+      </header>
+     
+ <hr>
+      <form method="POST" class="form">
+        {% csrf_token %}
+        <div class="boxes">
+          <div>
+          <ul class="check-card">
+              <li class="check-card-item">
+                  <input type="checkbox" id="check01" name="check_01" value="1">
+                  <label for="check01" class="radio"></label>
+                  <div class="check-card-bg"></div>
+                  <div class="check-card-body">
+                      <div class="check-card-toggle">
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <div class="check-card-body-in">
+                          <h3 class="check-card-title">Income Tax Act</h3>
+                          <p class="check-card-description">
+                              Income tax file-up reminder
+                          </p>
+                      </div>
+                      <div class="check-card-cancel">CANCEL</div>
+                  </div>
+              </li>
+          </ul>
+      
+          <ul class="check-card">
+              <li class="check-card-item">
+                  <input type="checkbox" id="check02" name="check_02" value="1">
+                  <label for="check02" class="radio"></label>
+                  <div class="check-card-bg"></div>
+                  <div class="check-card-body">
+                      <div class="check-card-toggle">
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <div class="check-card-body-in">
+                          <h3 class="check-card-title">Companies Act</h3>
+                          <p class="check-card-description">
+                              Card item description
+                          </p>
+                      </div>
+                      <div class="check-card-cancel">CANCEL</div>
+                  </div>
+              </li>
+          </ul>
+      </div>
+      <div>
+          <ul class="check-card">
+              <li class="check-card-item">
+                  <input type="checkbox" id="check03" name="check_03" value="1">
+                  <label for="check03" class="radio"></label>
+                  <div class="check-card-bg"></div>
+                  <div class="check-card-body">
+                      <div class="check-card-toggle">
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <div class="check-card-body-in">
+                          <h3 class="check-card-title">GST Act</h3>
+                          <p class="check-card-description">
+                              GST return file-up reminder
+                          </p>
+                      </div>
+                      <div class="check-card-cancel">CANCEL</div>
+                  </div>
+              </li>
+          </ul>
+      
+          <ul class="check-card">
+              <li class="check-card-item">
+                  <input type="checkbox" id="check04" name="check_04" value="1">
+                  <label for="check04" class="radio"></label>
+                  <div class="check-card-bg"></div>
+                  <div class="check-card-body">
+                      <div class="check-card-toggle">
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <div class="check-card-body-in">
+                          <h3 class="check-card-title">Accounting</h3>
+                          <p class="check-card-description">
+                              Card item description
+                          </p>
+                      </div>
+                      <div class="check-card-cancel">CANCEL</div>
+                  </div>
+              </li>
+          </ul>
+      </div>
+      </div> 
+  <button type="submit" class="button">Activate</button>
+  
+</form>
+
+    </body>
+  
+  
+      <footer>
+        <hr>
+        <div class="wrapper">
+          <div id="footer-info">
+            <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+            <p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
+          </div>
+          <div id="footer-links">
+            <ul>
+              <p><h5>Company</h5></p>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Meet The Team</a></li>
+              <li><a href="#">What We Do</a></li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </footer>
+  
+  </html>

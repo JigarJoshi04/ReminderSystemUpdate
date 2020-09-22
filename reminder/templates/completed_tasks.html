@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/client_details.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+        <title>Completed Tasks</title>
+
+  </head>
+  <header>
+    <div class="wrapper">
+      <span class="color"
+        ><img class="logo" src="{% static '/images/logo.png' %}" alt="logo"
+      /></span>
+
+      <nav>
+        <ul>
+          <li><a href="../">Home</a></li>
+         
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr>
+
+<div class='header__item' style="color: black;"><h1>Completed Tasks</h1></div>
+
+<br>
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th >#</th>
+      <th scope="col" class="header__item">Task ID</th>
+      <th scope="col" class="header__item">Email Id</th>
+      <th scope="col" class="header__item">Client Name</th>
+      <th scope="col" class="header__item">Service Name</th>
+      <th scope="col" class="header__item">Service Type</th>
+      <th scope="col" class="header__item">Sent On</th>
+      <th scope="col" class="header__item">Due date</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for clients in rows %}
+                <tr class="table-row">
+                    {% for client in clients %}
+                    <td class="table-data">{{client}}</td>
+                    
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+  
+  </tbody>
+</table>
+
+
+<footer class="page-footer font-small special-color-black pt-4">
+
+ 
+   
+        <p>Copyright 2020 Auto-Reminder-System. All rights reserved.</p>
+    
+  
+      <div class="clear"></div>
+  
+  </footer>
+   </body>
+   </html>
